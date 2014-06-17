@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.keil.uv4.axflauncher">
+<stringAttribute key="com.keil.uv4.core.ATTR_AXF_PROGRAM" value="MDK-ARM/new1.axf"/>
+<stringAttribute key="com.keil.uv4.core.ATTR_DB_INCLUDE_PATH" value="ST\STM32F10x\"/>
+<intAttribute key="com.keil.uv4.core.ATTR_UV4_PORT" value="5101"/>
+<stringAttribute key="com.keil.uv4.core.ATTR_UVPROJ_FILE" value="new1(new1.axf).uvpdbg"/>
+<booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="false"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="/new1"/>
+<booleanAttribute key="org.eclipse.debug.core.capture_output" value="false"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_CONSOLE_OUTPUT_ON" value="false"/>
+</launchConfiguration>

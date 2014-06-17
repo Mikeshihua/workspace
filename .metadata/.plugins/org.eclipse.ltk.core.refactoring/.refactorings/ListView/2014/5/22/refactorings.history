@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 1 resources to &apos;menu&apos;" description="Move 1 resources to &apos;menu&apos;" destination="res/menu" element1="res/layout/fragment_main.xml" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1401341094240" updateReferences="true"/>
+</session>

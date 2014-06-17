@@ -1,0 +1,7 @@
+content_assist_proposals_timeout=5000
+eclipse.preferences.version=1
+sourceHoverBackgroundColor=204,232,207
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true
+wizard.preferred.toolchains=com.arm.toolchain.baremetal.exe.debug

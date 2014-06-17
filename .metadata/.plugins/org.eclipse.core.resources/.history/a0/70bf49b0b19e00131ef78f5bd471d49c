@@ -1,0 +1,18 @@
+
+public class MyCountat {
+	public MyCountat(int startValue){
+		counter = startValue;
+	}
+	
+	public MyCountat(){
+		counter = 1;
+	}
+	
+	
+	public int realValue(){
+		int temp  = counter;
+		counter++;
+		return (temp);
+	}
+	private int counter;
+}

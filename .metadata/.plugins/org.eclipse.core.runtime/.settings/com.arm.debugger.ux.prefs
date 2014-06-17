@@ -1,0 +1,4 @@
+ConnectionManager.savedConnections=<connections>\r\n <connection current\="yes" mode\="debug" type\="com.arm.debugger.launcher2">New_configuration</connection>\r\n</connections>\r\n
+PreferredTargetHasBeenSet=true
+UXContextManager.savedContexts=<contexts>\r\n <context>Connection|dk6rypw5y\:1q0h8evfrs5lm|1397033051210|workspace\:\:New_configuration|New_configuration</context>\r\n</contexts>\r\n
+eclipse.preferences.version=1

@@ -1,0 +1,142 @@
+package com.shihua.controlsss;
+
+
+
+import java.math.BigDecimal;
+
+import android.support.v4.app.Fragment;
+import android.text.LoginFilter;
+import android.content.DialogInterface.OnClickListener;
+import android.os.Bundle;
+import android.os.Handler;
+import android.util.LongSparseArray;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Checkable;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.os.Build;
+
+
+public class MainActivity extends ActionBarActivity {
+
+	private Button button;
+	private TextView textView;
+	private TextView textViewShow;
+	private EditText editText;
+	private  Spinner spinner;
+	private CheckBox checkB1,checkB2;
+	private Handler mHandler;
+	
+	String[] sexStrings =new String[]{"boy","girl"};
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		button = (Button)findViewById(R.id.button1);
+		textView = (TextView) findViewById(R.id.textView1);
+		textViewShow = (TextView) findViewById(R.id.textView2);
+		editText = (EditText)findViewById(R.id.editText1);
+		spinner = (Spinner)findViewById(R.id.spinner1);
+		checkB1 = (CheckBox) findViewById(R.id.checkbox1);
+		checkB2 = (CheckBox) findViewById(R.id.checkbox2);
+		ProgressBar progressB =(ProgressBar)findViewById(R.id.progressBar1);
+		
+
+		ArrayAdapter<String> adapterSex= new ArrayAdapter<String>(this, 
+				android.R.layout.simple_spinner_item,sexStrings);
+		adapterSex.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinner.setAdapter(adapterSex);
+		button.setOnClickListener( button1Click);
+		spinner.setOnItemSelectedListener(spL);
+		if (savedInstanceState == null) {
+			getSupportFragmentManager().beginTransaction()
+					.add(R.id.container, new PlaceholderFragment()).commit();
+		}
+		
+		longWork work = new longWork();
+		work.setHandler(mHandler);
+		work.setProgressBar(progressB);
+		work.start();
+		
+	}
+	private Spinner.OnItemSelectedListener spL=new Spinner.OnItemSelectedListener() {
+		@Override
+		public void onItemSelected(AdapterView<?> parent, 
+				View v,
+				int position,
+				long id) {
+			// TODO Auto-generated method stub
+			textViewShow.setText(parent.getSelectedItem().toString());
+		}
+
+		@Override
+		public void onNothingSelected(AdapterView<?> parent) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	};
+	private Button.OnClickListener button1Click=new Button.OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			String num = editText.getText().toString();
+			textViewShow.setText(num);
+			if(checkB1.isChecked()){
+				textViewShow.setText("big girl");
+			}
+			if(checkB2.isChecked()){
+				textViewShow.setText("big boy");
+			}
+		}
+		
+	};
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+	/**
+	 * A placeholder fragment containing a simple view.
+	 */
+	public static class PlaceholderFragment extends Fragment {
+
+		public PlaceholderFragment() {
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View rootView = inflater.inflate(R.layout.fragment_main, container,
+					false);
+			return rootView;
+		}
+	}
+
+}

@@ -1,0 +1,37 @@
+/*
+ * File: Pyramid.java
+ * ------------------
+ * This program is a stub for the Pyramid problem, which draws
+ * a brick pyramid.
+ */
+
+import acm.graphics.*;
+import acm.program.*;
+
+public class Pyramid extends GraphicsProgram {
+
+	public static final double BRICK_WIDTH = 30;
+	public static final double BRICK_HEIGHT = 12;
+	public static final double BRICK_IN_BASE = 14;
+	
+	public void run() {
+		//drawPramid();
+		drawBrick(0,0);
+	}
+
+	private void drawPramid() {
+		// TODO Auto-generated method stub
+		double fistBrickPlace = (getWidth() - BRICK_IN_BASE * BRICK_WIDTH)/2;
+//		for(int k = (int)BRICK_IN_BASE; k > 0; k--)
+//			for(int j=1; j <= BRICK_HEIGHT; j++)
+//				for(int i=1; i <= k; i++)
+					drawBrick(fistBrickPlace ,BRICK_HEIGHT);
+	}
+
+	private void drawBrick(double x, double y) {
+		// TODO Auto-generated method stub
+		brick = new GRect(BRICK_WIDTH,BRICK_HEIGHT);
+		add(brick,x,y);
+	}
+	private GRect brick;
+}

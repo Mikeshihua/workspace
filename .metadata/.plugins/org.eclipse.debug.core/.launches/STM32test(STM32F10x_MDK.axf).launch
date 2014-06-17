@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.keil.uv4.axflauncher">
+<stringAttribute key="com.keil.uv4.core.ATTR_AXF_PROGRAM" value="MDK-ARM/OBJ/STM32F10x_MDK.axf"/>
+<stringAttribute key="com.keil.uv4.core.ATTR_UVPROJ_FILE" value="/STM32test/STM32test_0.uvpdbg"/>
+<booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="false"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="/STM32test"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_CONSOLE_OUTPUT_ON" value="false"/>
+</launchConfiguration>

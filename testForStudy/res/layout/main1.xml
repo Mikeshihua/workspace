@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+<TableRow>
+	<TextView android:text="姓名："/>
+	<TextView android:text="性别："/>
+	<TextView android:text="生日："/>
+</TableRow>
+<TableRow>
+	<EditText android:text="输入姓名"/>
+	<EditText android:text="输入性别"/>
+	<EditText android:text="输入生日"/>
+</TableRow>
+</TableLayout>
+<TableRow>
+	<TextView android:text="电话："/>
+	<TextView android:text="地址："/>
+</TableRow>
+<TableRow>
+	<EditText android:text="请输入电话"/>
+	<EditText android:text="请输入地址"/>
+</TableRow>
+</TableLayout>
